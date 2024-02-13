@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h2>List of snacks...</h2>
+<h2>List of Snacks</h2>
 
 <ul>
 
@@ -12,8 +12,8 @@
     <a href="{% url 'snack_detail' snack.pk %}">
       {{snack.name}}
     </a>
-    <p>{{snack.purchaser}}</p>
-    <p>{{snack.description}}</p>
+    <p>Purchaser: {{snack.purchaser}}</p>
+    <p>Description: {{snack.description}}</p>
   </ul>
   {% endfor%}
 

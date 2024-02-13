@@ -3,25 +3,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-  {% endcompress %}
-</head>
-<body>
-  <header class="bg-green-300 px-2 py-8">
-    <nav class="flex space-x-4 items-center">
-      <a class="text-4xl" href="{% url 'snack_list' %}">Snacks purchaser</a>
-      <a href="somesite.com">Some site</a>
-      <a href="othersite.com">Other site</a>
-    </nav>
-  </header>
-  <main>
-    {% block content %}
-    {% endblock content %}
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django</title>
+
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+    {% endcompress %}
+  </head>
+
+  <body>
+    <header class="bg-green-300">
+      <nav class="flex space-x-4 items-center">
+        <a href="{% url 'snack_list' %}" class="text-4xl">Snack List</a>
+        <a href="{% url 'about' %}" class="text-4xl" aria-current="page"
+          >About</a
+        >
+      </nav>
+    </header>
+    <main>
+        <div class="container mx-auto mt-4">
+          {% block content %} 
+          {% endblock content %}
+        </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>

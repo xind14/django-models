@@ -1,8 +1,8 @@
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Snack
 
-# class HomePageView(TemplateView):
-#   template_name = 'home.html'
+class AboutPageView(TemplateView):
+  template_name = 'about.html'
 
 class SnackListView(ListView):
   template_name = 'snack_list.html'
@@ -12,4 +12,8 @@ class SnackListView(ListView):
 class SnackDetailView(DetailView):
   template_name = 'snack_detail.html'
   model = Snack  
-  context_object_name = 'snacks'
+
+# model admin steps
+  # python manage.py createsuperuser
+  # python manage.py makemigrations snacks
+  # python manage.py migrate
