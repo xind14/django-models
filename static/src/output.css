@@ -104,6 +104,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
+  text-align: center;
 }
 
 /*
@@ -112,7 +113,7 @@ Reset links to optimize for opt-in styling instead of opt-out.
 
 a {
   color: inherit;
-  text-decoration: inherit;
+  /* text-decoration: inherit; */
 }
 
 /*
@@ -613,6 +614,7 @@ video {
 
 .flex {
   display: flex;
+  justify-content: center;
 }
 
 .h-64 {
@@ -685,6 +687,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.text-center{
+  text-align: -webkit-center;
 }
 
 .p-5 {
